@@ -1,9 +1,9 @@
-FROM python:3.7-alpine
-WORKDIR /code
-ENV FLASK_APP app.py
-ENV FLASK_RUN_HOST 0.0.0.0
-RUN apk add --no-cache gcc musl-dev linux-headers
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
-COPY . .
-CMD ["flask", "run"]
+FROM python:3
+
+COPY . /usr/src/app/
+
+WORKDIR /usr/src/app/
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD ["python", "web.py"]
