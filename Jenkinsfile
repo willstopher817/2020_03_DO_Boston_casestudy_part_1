@@ -10,7 +10,7 @@ pipeline {
 	stage('Clone') {
 	    steps {
 	        script {
-		    sh 'rm -rf jenkins.docker.spring.react_person-database'
+		    sh 'rm -rf 2020_03_DO_Boston_casestudy_part_1.git'
 	            sh 'git clone https://github.com/willstopher817/2020_03_DO_Boston_casestudy_part_1.git'
 		}
 	    }
