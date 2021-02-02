@@ -1,11 +1,20 @@
 pipeline {
     agent any
     environment {
-        DOCKER_HUB_REPO = "willstopher/test"
+        DOCKER_HUB_REPO = "willstopher/case-study-1"
         CONTAINER_NAME = "flask-container"
         STUB_VALUE = "200"
     }
     stages {
+
+	stage('Clone') {
+	    steps {
+	        script {
+		    sh 'rm -rf jenkins.docker.spring.react_person-database'
+	            sh 'git clone https://github.com/willstopher817/2020_03_DO_Boston_casestudy_part_1.git'
+		}
+	    }
+	}
         stage('Stubs-Replacement'){
             steps {
                 // 'STUB_VALUE' Environment Variable declared in Jenkins Configuration 
