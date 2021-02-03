@@ -10,7 +10,7 @@ pipeline {
 	stage('Clone') {
 	    steps {
 	        script {
-		    sh 'rm -rf 2020_03_DO_Boston_casestudy_part_1.git'
+		    sh 'rm -rf 2020_03_DO_Boston_casestudy_part_1'
 	            sh 'git clone https://github.com/willstopher817/2020_03_DO_Boston_casestudy_part_1.git'
 		}
 	    }
@@ -18,9 +18,10 @@ pipeline {
         stage('Stubs-Replacement'){
             steps {
                 // 'STUB_VALUE' Environment Variable declared in Jenkins Configuration 
-                echo "STUB_VALUE = ${STUB_VALUE}"
+                echo 'STUB_VALUE = ${STUB_VALUE}'
                 sh "sed -i 's/<STUB_VALUE>/$STUB_VALUE/g' config.py"
                 sh 'cat config.py'
+		sh 'ls'
             }
         }
         stage('Build') {
