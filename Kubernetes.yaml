@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: case-study-1
+  name: case-study-1-deployment
   labels:
     app: case-study-1
 spec:
@@ -15,7 +15,7 @@ spec:
         app: case-study-1
     spec:
       containers:     
-        - name: case-study-1-container
+        - name: case-study-1
           image: willstopher/case-study-1:latest
           ports:
             - containerPort: 8020   
