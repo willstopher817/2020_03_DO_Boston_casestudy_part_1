@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: 127.0.0.1
   become: true
   tasks:
   - name: apt update
@@ -8,12 +8,22 @@
     command: apt install software-properties-common
   - name: conntrack install
     command: apt install conntrack
-  - name: Install Minikube 
-    command: [wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64, cp minikube-linux-amd64 /usr/local/bin/minikube, chmod 755 /usr/local/bin/minikube]
-  - name: Install kubectl
-    command: [curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl, chmod +x ./kubectl, mv ./kubectl /usr/local/bin/kubectl]   
-
-  - name: Start minikube
-    command: minikube start
+  - name: Add an apt signing key for Kubernetes
+    apt_key:
+      url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+      state: present
+  - name: Adding apt repository for Kubernetes
+    apt_repository:
+      repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+      state: present
+      filename: kubernetes.list
+  - name: Install Kubernetes binaries
+    apt: 
+      name: "{{ packages }}"
+      state: present
+    vars:
+      packages:
+        - kubeadm
+        - kubectl
   - name: run Kubernetes
-    command: kubectl apply -f Kubernetes.yaml
+    command: kubectl apply -f Kubernetes.yaml 
