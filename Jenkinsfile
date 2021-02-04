@@ -5,6 +5,7 @@ pipeline {
         CONTAINER_NAME = "case-study-1-container"
         STUB_VALUE = "200"
     }
+   
     stages {
         stage('Clone') {
             steps {
@@ -14,15 +15,7 @@ pipeline {
                 }
             }
         }
-    
-        stage('Setup') {
-            steps {
-                script {
-                    sh 'ansible-playbook ansible-playbook-setup.yaml'
-                }
-            }
-        }
-    
+        
         stage('Build') {
             steps {
                 //  Building new image
@@ -42,5 +35,14 @@ pipeline {
                 echo "Image built and pushed to repository"
             }
         }
+
+        stage('Setup') {
+            steps {
+                script {
+                    sh 'ansible-playbook ansible-playbook-setup.yaml'
+                }
+            }
+        }
+
     }
 }
