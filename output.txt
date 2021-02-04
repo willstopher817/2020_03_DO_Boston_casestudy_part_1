@@ -1,2 +1,6 @@
 NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
-case-study-1-deployment   0/3     0            0           1s
+case-study-1-deployment   3/3     3            3           64s
+NAME                                       READY   STATUS    RESTARTS   AGE
+case-study-1-deployment-68f6d6f6bd-qv845   1/1     Running   0          62s
+case-study-1-deployment-68f6d6f6bd-vxzfz   1/1     Running   0          61s
+case-study-1-deployment-68f6d6f6bd-x6drf   1/1     Running   0          61s
