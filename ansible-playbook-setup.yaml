@@ -23,7 +23,7 @@
       repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
       state: present
       filename: kubernetes.list
-  - name: Install Kubernetes binaries
+  - name: Install tools
     apt: 
       name: "{{ packages }}"
       state: present
@@ -39,3 +39,9 @@
     command: minikube start --driver=none
   - name: run Kubernetes
     command: kubectl apply -f Kubernetes.yaml
+  - name: make executable
+    command: chmod +x kubernetes-cluster-information.sh
+  - name: output
+    shell: timeout 10s ./kubernetes-cluster-information.sh > output.txt
+    args:
+      chdir: /home/master/case-study/2020_03_DO_Boston_casestudy_part_1

@@ -1,0 +1,2 @@
+NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
+case-study-1-deployment   0/3     0            0           1s

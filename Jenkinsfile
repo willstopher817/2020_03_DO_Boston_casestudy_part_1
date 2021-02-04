@@ -39,7 +39,7 @@ pipeline {
         stage('Setup') {
             steps {
                 script {
-                    sh 'ansible-playbook ansible-playbook-setup.yaml'
+                    ansiblePlaybook(playbook: 'ansible-playbook-setup.yaml')
                 }
             }
         }
