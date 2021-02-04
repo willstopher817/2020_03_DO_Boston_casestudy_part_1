@@ -41,7 +41,10 @@
     command: kubectl apply -f Kubernetes.yaml
   - name: make executable
     command: chmod +x kubernetes-cluster-information.sh
+  - name: set timeout
+    wait_for:
+      timeout: 60 
   - name: output
-    shell: timeout 10s ./kubernetes-cluster-information.sh > output.txt
+    shell: ./kubernetes-cluster-information.sh > output.txt
     args:
       chdir: /home/master/case-study/2020_03_DO_Boston_casestudy_part_1
