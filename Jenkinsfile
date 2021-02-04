@@ -39,7 +39,9 @@ pipeline {
         stage('Setup') {
             steps {
                 script {
-                    ansiblePlaybook(playbook: 'ansible-playbook-setup.yaml')
+		    dir('2020_03_DO_Boston_casestudy_part_1') {
+                        ansiblePlaybook(playbook: 'ansible-playbook-setup.yaml')
+                    }
                 }
             }
         }
