@@ -8,22 +8,19 @@
     command: apt install software-properties-common
   - name: conntrack install
     command: apt install conntrack
-  - name: Add an apt signing key for Kubernetes
-    apt_key:
-      url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
-      state: present
-  - name: Adding apt repository for Kubernetes
-    apt_repository:
-      repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
-      state: present
-      filename: kubernetes.list
-  - name: Install Kubernetes binaries
-    apt: 
-      name: "{{ packages }}"
-      state: present
-    vars:
-      packages:
-        - kubeadm
-        - kubectl
+  - name: minikube install 1
+    command: wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  - name: minikube install 2
+    command: chmod +x minikube-linux-amd64
+  - name: minikube install 3
+    command: sudo mv minikube-linux-amd64 /usr/local/bin/minikube
+  - name kubectl install 1
+    command: curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+  - name: kubectl install 2
+    command: chmod +x ./kubectl
+  - name: kubectl install 3
+    command: sudo mv ./kubectl /usr/local/bin/kubectl
+  - name: start minikube
+    command: minikube start
   - name: run Kubernetes
     command: kubectl apply -f Kubernetes.yaml 
