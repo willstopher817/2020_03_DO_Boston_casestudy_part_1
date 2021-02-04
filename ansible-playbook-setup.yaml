@@ -13,14 +13,29 @@
   - name: minikube install 2
     command: chmod +x minikube-linux-amd64
   - name: minikube install 3
-    command: sudo mv minikube-linux-amd64 /usr/local/bin/minikube
-  - name kubectl install 1
-    command: curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
-  - name: kubectl install 2
-    command: chmod +x ./kubectl
-  - name: kubectl install 3
-    command: sudo mv ./kubectl /usr/local/bin/kubectl
+    command: mv minikube-linux-amd64 /usr/local/bin/minikube
+  - name: Add an apt signing key for Kubernetes
+    apt_key:
+      url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+      state: present
+  - name: Adding apt repository for Kubernetes
+    apt_repository:
+      repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+      state: present
+      filename: kubernetes.list
+  - name: Install Kubernetes binaries
+    apt: 
+      name: "{{ packages }}"
+      state: present
+    vars:
+      packages:
+        - kubeadm
+        - kubectl
+  - name: stop minikube
+    command: minikube delete
+  - name: sysctl
+    command: sysctl fs.protected_regular=0
   - name: start minikube
-    command: minikube start
+    command: minikube start --driver=none
   - name: run Kubernetes
-    command: kubectl apply -f Kubernetes.yaml 
+    command: kubectl apply -f Kubernetes.yaml
