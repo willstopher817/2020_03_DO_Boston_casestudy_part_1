@@ -2,10 +2,9 @@ pipeline {
     agent any
     environment {
         DOCKER_HUB_REPO = "willstopher/case-study-1"
-        CONTAINER_NAME = "flask-container"
+        CONTAINER_NAME = "case-study-1-container"
         STUB_VALUE = "200"
     }
-
     stages {
         stage('Clone') {
             steps {
@@ -15,6 +14,15 @@ pipeline {
                 }
             }
         }
+    
+        stage('Setup') {
+            steps {
+                script {
+                    sh 'ansible-playbook ansible-playbook-setup.yaml'
+                }
+            }
+        }
+    
         stage('Build') {
             steps {
                 //  Building new image
@@ -32,13 +40,6 @@ pipeline {
                 sh 'docker push $DOCKER_HUB_REPO:latest'
                 
                 echo "Image built and pushed to repository"
-            }
-        }
-        stage('Deploy with Kubernetes') {
-            steps {
-                script{
-                    sh 'kubectl apply -f kubernetes.yaml'
-                }
             }
         }
     }
