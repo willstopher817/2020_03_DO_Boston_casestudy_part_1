@@ -1,13 +1,13 @@
 NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
-case-study-1-deployment   7/7     7            7           62s
+case-study-1-deployment   7/7     7            7           61s
 NAME                                       READY   STATUS    RESTARTS   AGE
-case-study-1-deployment-68f6d6f6bd-45w7h   1/1     Running   0          51s
-case-study-1-deployment-68f6d6f6bd-cg4t6   1/1     Running   0          50s
-case-study-1-deployment-68f6d6f6bd-ct6c4   1/1     Running   0          50s
-case-study-1-deployment-68f6d6f6bd-gp4rf   1/1     Running   0          50s
-case-study-1-deployment-68f6d6f6bd-hhz2h   1/1     Running   0          50s
-case-study-1-deployment-68f6d6f6bd-jh6wh   1/1     Running   0          50s
-case-study-1-deployment-68f6d6f6bd-sn7ds   1/1     Running   0          50s
+case-study-1-deployment-68f6d6f6bd-6dcf7   1/1     Running   0          50s
+case-study-1-deployment-68f6d6f6bd-kp4x8   1/1     Running   0          50s
+case-study-1-deployment-68f6d6f6bd-mntt4   1/1     Running   0          50s
+case-study-1-deployment-68f6d6f6bd-svsb5   1/1     Running   0          50s
+case-study-1-deployment-68f6d6f6bd-tjjt6   1/1     Running   0          50s
+case-study-1-deployment-68f6d6f6bd-v7m5m   1/1     Running   0          51s
+case-study-1-deployment-68f6d6f6bd-vd8g4   1/1     Running   0          50s
 Name:              kubernetes
 Namespace:         default
 Labels:            component=apiserver
@@ -23,115 +23,11 @@ TargetPort:        8443/TCP
 Endpoints:         10.0.2.15:8443
 Session Affinity:  None
 Events:            <none>
-Name:         case-study-1-deployment-68f6d6f6bd-45w7h
+Name:         case-study-1-deployment-68f6d6f6bd-6dcf7
 Namespace:    default
 Priority:     0
 Node:         master/10.0.2.15
-Start Time:   Thu, 04 Feb 2021 19:11:50 -0500
-Labels:       app=case-study-1
-              pod-template-hash=68f6d6f6bd
-Annotations:  <none>
-Status:       Running
-IP:           172.17.0.3
-IPs:
-  IP:           172.17.0.3
-Controlled By:  ReplicaSet/case-study-1-deployment-68f6d6f6bd
-Containers:
-  case-study-1:
-    Container ID:   docker://1cbf2a19ec1ed23218e5df24de8944fb7ccd8084a5ea9d1e1e20b178036e6e08
-    Image:          willstopher/case-study-1:latest
-    Image ID:       docker-pullable://willstopher/case-study-1@sha256:ccaf3c5f7f3d855cad96f0d23961e9d60a85eb3d1a2adfe9872625ce758b71e7
-    Port:           8020/TCP
-    Host Port:      0/TCP
-    State:          Running
-      Started:      Thu, 04 Feb 2021 19:12:18 -0500
-    Ready:          True
-    Restart Count:  0
-    Environment:    <none>
-    Mounts:
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5m289 (ro)
-Conditions:
-  Type              Status
-  Initialized       True 
-  Ready             True 
-  ContainersReady   True 
-  PodScheduled      True 
-Volumes:
-  default-token-5m289:
-    Type:        Secret (a volume populated by a Secret)
-    SecretName:  default-token-5m289
-    Optional:    false
-QoS Class:       BestEffort
-Node-Selectors:  <none>
-Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
-                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
-Events:
-  Type    Reason     Age   From               Message
-  ----    ------     ----  ----               -------
-  Normal  Scheduled  50s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-45w7h to master
-  Normal  Pulling    33s   kubelet            Pulling image "willstopher/case-study-1:latest"
-  Normal  Pulled     32s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 1.124524134s
-  Normal  Created    27s   kubelet            Created container case-study-1
-  Normal  Started    21s   kubelet            Started container case-study-1
-
-
-Name:         case-study-1-deployment-68f6d6f6bd-cg4t6
-Namespace:    default
-Priority:     0
-Node:         master/10.0.2.15
-Start Time:   Thu, 04 Feb 2021 19:11:52 -0500
-Labels:       app=case-study-1
-              pod-template-hash=68f6d6f6bd
-Annotations:  <none>
-Status:       Running
-IP:           172.17.0.9
-IPs:
-  IP:           172.17.0.9
-Controlled By:  ReplicaSet/case-study-1-deployment-68f6d6f6bd
-Containers:
-  case-study-1:
-    Container ID:   docker://ed4616e8143a959319d8de67715508296afa3f81339a014e9db5bb0e08974de9
-    Image:          willstopher/case-study-1:latest
-    Image ID:       docker-pullable://willstopher/case-study-1@sha256:ccaf3c5f7f3d855cad96f0d23961e9d60a85eb3d1a2adfe9872625ce758b71e7
-    Port:           8020/TCP
-    Host Port:      0/TCP
-    State:          Running
-      Started:      Thu, 04 Feb 2021 19:12:30 -0500
-    Ready:          True
-    Restart Count:  0
-    Environment:    <none>
-    Mounts:
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5m289 (ro)
-Conditions:
-  Type              Status
-  Initialized       True 
-  Ready             True 
-  ContainersReady   True 
-  PodScheduled      True 
-Volumes:
-  default-token-5m289:
-    Type:        Secret (a volume populated by a Secret)
-    SecretName:  default-token-5m289
-    Optional:    false
-QoS Class:       BestEffort
-Node-Selectors:  <none>
-Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
-                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
-Events:
-  Type    Reason     Age   From               Message
-  ----    ------     ----  ----               -------
-  Normal  Scheduled  49s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-cg4t6 to master
-  Normal  Pulling    22s   kubelet            Pulling image "willstopher/case-study-1:latest"
-  Normal  Pulled     16s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 5.50471763s
-  Normal  Created    11s   kubelet            Created container case-study-1
-  Normal  Started    11s   kubelet            Started container case-study-1
-
-
-Name:         case-study-1-deployment-68f6d6f6bd-ct6c4
-Namespace:    default
-Priority:     0
-Node:         master/10.0.2.15
-Start Time:   Thu, 04 Feb 2021 19:11:52 -0500
+Start Time:   Thu, 04 Feb 2021 19:35:08 -0500
 Labels:       app=case-study-1
               pod-template-hash=68f6d6f6bd
 Annotations:  <none>
@@ -142,18 +38,18 @@ IPs:
 Controlled By:  ReplicaSet/case-study-1-deployment-68f6d6f6bd
 Containers:
   case-study-1:
-    Container ID:   docker://7f4ac3d27454256972fe1776808cca39b81bf4e5bcc12e26efd3e21820f1c063
+    Container ID:   docker://c2c87124891619bbeec8eb40c40f09366339077c549dabc96eef1cbacf037fee
     Image:          willstopher/case-study-1:latest
     Image ID:       docker-pullable://willstopher/case-study-1@sha256:ccaf3c5f7f3d855cad96f0d23961e9d60a85eb3d1a2adfe9872625ce758b71e7
     Port:           8020/TCP
     Host Port:      0/TCP
     State:          Running
-      Started:      Thu, 04 Feb 2021 19:12:28 -0500
+      Started:      Thu, 04 Feb 2021 19:35:40 -0500
     Ready:          True
     Restart Count:  0
     Environment:    <none>
     Mounts:
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5m289 (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-qgn9v (ro)
 Conditions:
   Type              Status
   Initialized       True 
@@ -161,9 +57,9 @@ Conditions:
   ContainersReady   True 
   PodScheduled      True 
 Volumes:
-  default-token-5m289:
+  default-token-qgn9v:
     Type:        Secret (a volume populated by a Secret)
-    SecretName:  default-token-5m289
+    SecretName:  default-token-qgn9v
     Optional:    false
 QoS Class:       BestEffort
 Node-Selectors:  <none>
@@ -172,18 +68,18 @@ Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
 Events:
   Type    Reason     Age   From               Message
   ----    ------     ----  ----               -------
-  Normal  Scheduled  49s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-ct6c4 to master
-  Normal  Pulling    28s   kubelet            Pulling image "willstopher/case-study-1:latest"
-  Normal  Pulled     23s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 4.786687181s
-  Normal  Created    16s   kubelet            Created container case-study-1
-  Normal  Started    13s   kubelet            Started container case-study-1
+  Normal  Scheduled  50s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-6dcf7 to master
+  Normal  Pulling    30s   kubelet            Pulling image "willstopher/case-study-1:latest"
+  Normal  Pulled     28s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 2.35610629s
+  Normal  Created    20s   kubelet            Created container case-study-1
+  Normal  Started    18s   kubelet            Started container case-study-1
 
 
-Name:         case-study-1-deployment-68f6d6f6bd-gp4rf
+Name:         case-study-1-deployment-68f6d6f6bd-kp4x8
 Namespace:    default
 Priority:     0
 Node:         master/10.0.2.15
-Start Time:   Thu, 04 Feb 2021 19:11:52 -0500
+Start Time:   Thu, 04 Feb 2021 19:35:08 -0500
 Labels:       app=case-study-1
               pod-template-hash=68f6d6f6bd
 Annotations:  <none>
@@ -194,18 +90,18 @@ IPs:
 Controlled By:  ReplicaSet/case-study-1-deployment-68f6d6f6bd
 Containers:
   case-study-1:
-    Container ID:   docker://abf95c5471d0152d3a9510f76dfd764efc6f7c44374b07b49835c3ef7ffe898a
+    Container ID:   docker://48a833807bf21620081fc83f528f793687a94d9dfb79ea6dcdb54d4ea77ddf38
     Image:          willstopher/case-study-1:latest
     Image ID:       docker-pullable://willstopher/case-study-1@sha256:ccaf3c5f7f3d855cad96f0d23961e9d60a85eb3d1a2adfe9872625ce758b71e7
     Port:           8020/TCP
     Host Port:      0/TCP
     State:          Running
-      Started:      Thu, 04 Feb 2021 19:12:30 -0500
+      Started:      Thu, 04 Feb 2021 19:35:42 -0500
     Ready:          True
     Restart Count:  0
     Environment:    <none>
     Mounts:
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5m289 (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-qgn9v (ro)
 Conditions:
   Type              Status
   Initialized       True 
@@ -213,9 +109,9 @@ Conditions:
   ContainersReady   True 
   PodScheduled      True 
 Volumes:
-  default-token-5m289:
+  default-token-qgn9v:
     Type:        Secret (a volume populated by a Secret)
-    SecretName:  default-token-5m289
+    SecretName:  default-token-qgn9v
     Optional:    false
 QoS Class:       BestEffort
 Node-Selectors:  <none>
@@ -224,70 +120,18 @@ Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
 Events:
   Type    Reason     Age   From               Message
   ----    ------     ----  ----               -------
-  Normal  Scheduled  49s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-gp4rf to master
-  Normal  Pulling    23s   kubelet            Pulling image "willstopher/case-study-1:latest"
-  Normal  Pulled     21s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 2.167559689s
-  Normal  Created    16s   kubelet            Created container case-study-1
-  Normal  Started    11s   kubelet            Started container case-study-1
+  Normal  Scheduled  50s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-kp4x8 to master
+  Normal  Pulling    28s   kubelet            Pulling image "willstopher/case-study-1:latest"
+  Normal  Pulled     22s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 5.805796817s
+  Normal  Created    19s   kubelet            Created container case-study-1
+  Normal  Started    14s   kubelet            Started container case-study-1
 
 
-Name:         case-study-1-deployment-68f6d6f6bd-hhz2h
+Name:         case-study-1-deployment-68f6d6f6bd-mntt4
 Namespace:    default
 Priority:     0
 Node:         master/10.0.2.15
-Start Time:   Thu, 04 Feb 2021 19:11:52 -0500
-Labels:       app=case-study-1
-              pod-template-hash=68f6d6f6bd
-Annotations:  <none>
-Status:       Running
-IP:           172.17.0.8
-IPs:
-  IP:           172.17.0.8
-Controlled By:  ReplicaSet/case-study-1-deployment-68f6d6f6bd
-Containers:
-  case-study-1:
-    Container ID:   docker://0b33caea6170164467964d97eab4ec91997590c3401cfadf40ece4b430f15094
-    Image:          willstopher/case-study-1:latest
-    Image ID:       docker-pullable://willstopher/case-study-1@sha256:ccaf3c5f7f3d855cad96f0d23961e9d60a85eb3d1a2adfe9872625ce758b71e7
-    Port:           8020/TCP
-    Host Port:      0/TCP
-    State:          Running
-      Started:      Thu, 04 Feb 2021 19:12:30 -0500
-    Ready:          True
-    Restart Count:  0
-    Environment:    <none>
-    Mounts:
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5m289 (ro)
-Conditions:
-  Type              Status
-  Initialized       True 
-  Ready             True 
-  ContainersReady   True 
-  PodScheduled      True 
-Volumes:
-  default-token-5m289:
-    Type:        Secret (a volume populated by a Secret)
-    SecretName:  default-token-5m289
-    Optional:    false
-QoS Class:       BestEffort
-Node-Selectors:  <none>
-Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
-                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
-Events:
-  Type    Reason     Age   From               Message
-  ----    ------     ----  ----               -------
-  Normal  Scheduled  49s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-hhz2h to master
-  Normal  Pulling    23s   kubelet            Pulling image "willstopher/case-study-1:latest"
-  Normal  Pulled     19s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 4.098316424s
-  Normal  Created    13s   kubelet            Created container case-study-1
-  Normal  Started    11s   kubelet            Started container case-study-1
-
-
-Name:         case-study-1-deployment-68f6d6f6bd-jh6wh
-Namespace:    default
-Priority:     0
-Node:         master/10.0.2.15
-Start Time:   Thu, 04 Feb 2021 19:11:51 -0500
+Start Time:   Thu, 04 Feb 2021 19:35:08 -0500
 Labels:       app=case-study-1
               pod-template-hash=68f6d6f6bd
 Annotations:  <none>
@@ -298,18 +142,18 @@ IPs:
 Controlled By:  ReplicaSet/case-study-1-deployment-68f6d6f6bd
 Containers:
   case-study-1:
-    Container ID:   docker://cc34ec596cfa8f82fe9ea9e9676b8360bbfd359bf327f15ea8c557cdae80f2fc
+    Container ID:   docker://542b813ca2ca5e438677a1f489a7a4700185ae5c5ff53754a4920f07ab43c5c6
     Image:          willstopher/case-study-1:latest
     Image ID:       docker-pullable://willstopher/case-study-1@sha256:ccaf3c5f7f3d855cad96f0d23961e9d60a85eb3d1a2adfe9872625ce758b71e7
     Port:           8020/TCP
     Host Port:      0/TCP
     State:          Running
-      Started:      Thu, 04 Feb 2021 19:12:18 -0500
+      Started:      Thu, 04 Feb 2021 19:35:40 -0500
     Ready:          True
     Restart Count:  0
     Environment:    <none>
     Mounts:
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5m289 (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-qgn9v (ro)
 Conditions:
   Type              Status
   Initialized       True 
@@ -317,9 +161,9 @@ Conditions:
   ContainersReady   True 
   PodScheduled      True 
 Volumes:
-  default-token-5m289:
+  default-token-qgn9v:
     Type:        Secret (a volume populated by a Secret)
-    SecretName:  default-token-5m289
+    SecretName:  default-token-qgn9v
     Optional:    false
 QoS Class:       BestEffort
 Node-Selectors:  <none>
@@ -328,18 +172,70 @@ Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
 Events:
   Type    Reason     Age   From               Message
   ----    ------     ----  ----               -------
-  Normal  Scheduled  50s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-jh6wh to master
-  Normal  Pulling    33s   kubelet            Pulling image "willstopher/case-study-1:latest"
-  Normal  Pulled     31s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 2.803136634s
-  Normal  Created    27s   kubelet            Created container case-study-1
-  Normal  Started    22s   kubelet            Started container case-study-1
+  Normal  Scheduled  50s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-mntt4 to master
+  Normal  Pulling    29s   kubelet            Pulling image "willstopher/case-study-1:latest"
+  Normal  Pulled     24s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 5.067988441s
+  Normal  Created    20s   kubelet            Created container case-study-1
+  Normal  Started    17s   kubelet            Started container case-study-1
 
 
-Name:         case-study-1-deployment-68f6d6f6bd-sn7ds
+Name:         case-study-1-deployment-68f6d6f6bd-svsb5
 Namespace:    default
 Priority:     0
 Node:         master/10.0.2.15
-Start Time:   Thu, 04 Feb 2021 19:11:50 -0500
+Start Time:   Thu, 04 Feb 2021 19:35:08 -0500
+Labels:       app=case-study-1
+              pod-template-hash=68f6d6f6bd
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.9
+IPs:
+  IP:           172.17.0.9
+Controlled By:  ReplicaSet/case-study-1-deployment-68f6d6f6bd
+Containers:
+  case-study-1:
+    Container ID:   docker://e8d54658435bda125e84979238fd56d667c73cc6434cb615bf6aa22cff132dbb
+    Image:          willstopher/case-study-1:latest
+    Image ID:       docker-pullable://willstopher/case-study-1@sha256:ccaf3c5f7f3d855cad96f0d23961e9d60a85eb3d1a2adfe9872625ce758b71e7
+    Port:           8020/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 04 Feb 2021 19:35:46 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-qgn9v (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-qgn9v:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-qgn9v
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  50s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-svsb5 to master
+  Normal  Pulling    27s   kubelet            Pulling image "willstopher/case-study-1:latest"
+  Normal  Pulled     17s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 9.497125055s
+  Normal  Created    13s   kubelet            Created container case-study-1
+  Normal  Started    12s   kubelet            Started container case-study-1
+
+
+Name:         case-study-1-deployment-68f6d6f6bd-tjjt6
+Namespace:    default
+Priority:     0
+Node:         master/10.0.2.15
+Start Time:   Thu, 04 Feb 2021 19:35:08 -0500
 Labels:       app=case-study-1
               pod-template-hash=68f6d6f6bd
 Annotations:  <none>
@@ -350,18 +246,18 @@ IPs:
 Controlled By:  ReplicaSet/case-study-1-deployment-68f6d6f6bd
 Containers:
   case-study-1:
-    Container ID:   docker://c4041588651571f22ff70b8e549eb569b29881d38cf9c7737a6aad0e201c29df
+    Container ID:   docker://879d7ea84ff14d88a551bb1359a51fea83c44fa8c438d657e3a19c7a464fba57
     Image:          willstopher/case-study-1:latest
     Image ID:       docker-pullable://willstopher/case-study-1@sha256:ccaf3c5f7f3d855cad96f0d23961e9d60a85eb3d1a2adfe9872625ce758b71e7
     Port:           8020/TCP
     Host Port:      0/TCP
     State:          Running
-      Started:      Thu, 04 Feb 2021 19:12:25 -0500
+      Started:      Thu, 04 Feb 2021 19:35:40 -0500
     Ready:          True
     Restart Count:  0
     Environment:    <none>
     Mounts:
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-5m289 (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-qgn9v (ro)
 Conditions:
   Type              Status
   Initialized       True 
@@ -369,9 +265,9 @@ Conditions:
   ContainersReady   True 
   PodScheduled      True 
 Volumes:
-  default-token-5m289:
+  default-token-qgn9v:
     Type:        Secret (a volume populated by a Secret)
-    SecretName:  default-token-5m289
+    SecretName:  default-token-qgn9v
     Optional:    false
 QoS Class:       BestEffort
 Node-Selectors:  <none>
@@ -380,11 +276,115 @@ Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
 Events:
   Type    Reason     Age   From               Message
   ----    ------     ----  ----               -------
-  Normal  Scheduled  51s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-sn7ds to master
-  Normal  Pulling    33s   kubelet            Pulling image "willstopher/case-study-1:latest"
-  Normal  Pulled     26s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 6.588026153s
-  Normal  Created    19s   kubelet            Created container case-study-1
-  Normal  Started    16s   kubelet            Started container case-study-1
+  Normal  Scheduled  50s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-tjjt6 to master
+  Normal  Pulling    29s   kubelet            Pulling image "willstopher/case-study-1:latest"
+  Normal  Pulled     26s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 2.988736994s
+  Normal  Created    20s   kubelet            Created container case-study-1
+  Normal  Started    18s   kubelet            Started container case-study-1
+
+
+Name:         case-study-1-deployment-68f6d6f6bd-v7m5m
+Namespace:    default
+Priority:     0
+Node:         master/10.0.2.15
+Start Time:   Thu, 04 Feb 2021 19:35:07 -0500
+Labels:       app=case-study-1
+              pod-template-hash=68f6d6f6bd
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.2
+IPs:
+  IP:           172.17.0.2
+Controlled By:  ReplicaSet/case-study-1-deployment-68f6d6f6bd
+Containers:
+  case-study-1:
+    Container ID:   docker://13eccb131fd84cdabf40f222d1ff2907589094a476c188475183fdc4f985f188
+    Image:          willstopher/case-study-1:latest
+    Image ID:       docker-pullable://willstopher/case-study-1@sha256:ccaf3c5f7f3d855cad96f0d23961e9d60a85eb3d1a2adfe9872625ce758b71e7
+    Port:           8020/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 04 Feb 2021 19:35:29 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-qgn9v (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-qgn9v:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-qgn9v
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  51s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-v7m5m to master
+  Normal  Pulling    40s   kubelet            Pulling image "willstopher/case-study-1:latest"
+  Normal  Pulled     38s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 2.207704713s
+  Normal  Created    32s   kubelet            Created container case-study-1
+  Normal  Started    29s   kubelet            Started container case-study-1
+
+
+Name:         case-study-1-deployment-68f6d6f6bd-vd8g4
+Namespace:    default
+Priority:     0
+Node:         master/10.0.2.15
+Start Time:   Thu, 04 Feb 2021 19:35:08 -0500
+Labels:       app=case-study-1
+              pod-template-hash=68f6d6f6bd
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.8
+IPs:
+  IP:           172.17.0.8
+Controlled By:  ReplicaSet/case-study-1-deployment-68f6d6f6bd
+Containers:
+  case-study-1:
+    Container ID:   docker://6480aaf9ba78fb0b0c9b5e1ee1ee3b54fd9a076a5fcf11a0688c4e569f9868f1
+    Image:          willstopher/case-study-1:latest
+    Image ID:       docker-pullable://willstopher/case-study-1@sha256:ccaf3c5f7f3d855cad96f0d23961e9d60a85eb3d1a2adfe9872625ce758b71e7
+    Port:           8020/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 04 Feb 2021 19:35:42 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-qgn9v (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-qgn9v:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-qgn9v
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  50s   default-scheduler  Successfully assigned default/case-study-1-deployment-68f6d6f6bd-vd8g4 to master
+  Normal  Pulling    28s   kubelet            Pulling image "willstopher/case-study-1:latest"
+  Normal  Pulled     20s   kubelet            Successfully pulled image "willstopher/case-study-1:latest" in 7.354882402s
+  Normal  Created    18s   kubelet            Created container case-study-1
+  Normal  Started    15s   kubelet            Started container case-study-1
 Name:               master
 Roles:              control-plane,master
 Labels:             beta.kubernetes.io/arch=amd64
@@ -394,27 +394,27 @@ Labels:             beta.kubernetes.io/arch=amd64
                     kubernetes.io/os=linux
                     minikube.k8s.io/commit=043bdca07e54ab6e4fc0457e3064048f34133d7e
                     minikube.k8s.io/name=minikube
-                    minikube.k8s.io/updated_at=2021_02_04T19_11_33_0700
+                    minikube.k8s.io/updated_at=2021_02_04T19_34_50_0700
                     minikube.k8s.io/version=v1.17.1
                     node-role.kubernetes.io/control-plane=
                     node-role.kubernetes.io/master=
 Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
                     node.alpha.kubernetes.io/ttl: 0
                     volumes.kubernetes.io/controller-managed-attach-detach: true
-CreationTimestamp:  Thu, 04 Feb 2021 19:11:29 -0500
+CreationTimestamp:  Thu, 04 Feb 2021 19:34:45 -0500
 Taints:             <none>
 Unschedulable:      false
 Lease:
   HolderIdentity:  master
   AcquireTime:     <unset>
-  RenewTime:       Thu, 04 Feb 2021 19:12:38 -0500
+  RenewTime:       Thu, 04 Feb 2021 19:35:55 -0500
 Conditions:
   Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
   ----             ------  -----------------                 ------------------                ------                       -------
-  MemoryPressure   False   Thu, 04 Feb 2021 19:11:46 -0500   Thu, 04 Feb 2021 19:11:28 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
-  DiskPressure     False   Thu, 04 Feb 2021 19:11:46 -0500   Thu, 04 Feb 2021 19:11:28 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
-  PIDPressure      False   Thu, 04 Feb 2021 19:11:46 -0500   Thu, 04 Feb 2021 19:11:28 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
-  Ready            True    Thu, 04 Feb 2021 19:11:46 -0500   Thu, 04 Feb 2021 19:11:46 -0500   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+  MemoryPressure   False   Thu, 04 Feb 2021 19:35:03 -0500   Thu, 04 Feb 2021 19:34:37 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Thu, 04 Feb 2021 19:35:03 -0500   Thu, 04 Feb 2021 19:34:37 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Thu, 04 Feb 2021 19:35:03 -0500   Thu, 04 Feb 2021 19:34:37 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Thu, 04 Feb 2021 19:35:03 -0500   Thu, 04 Feb 2021 19:35:03 -0500   KubeletReady                 kubelet is posting ready status. AppArmor enabled
 Addresses:
   InternalIP:  10.0.2.15
   Hostname:    master
@@ -446,20 +446,20 @@ PodCIDRs:                     10.244.0.0/24
 Non-terminated Pods:          (14 in total)
   Namespace                   Name                                        CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
   ---------                   ----                                        ------------  ----------  ---------------  -------------  ---
-  default                     case-study-1-deployment-68f6d6f6bd-45w7h    0 (0%)        0 (0%)      0 (0%)           0 (0%)         52s
-  default                     case-study-1-deployment-68f6d6f6bd-cg4t6    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
-  default                     case-study-1-deployment-68f6d6f6bd-ct6c4    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
-  default                     case-study-1-deployment-68f6d6f6bd-gp4rf    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
-  default                     case-study-1-deployment-68f6d6f6bd-hhz2h    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
-  default                     case-study-1-deployment-68f6d6f6bd-jh6wh    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
-  default                     case-study-1-deployment-68f6d6f6bd-sn7ds    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
-  kube-system                 coredns-74ff55c5b-f4ntk                     100m (2%)     0 (0%)      70Mi (1%)        170Mi (4%)     53s
-  kube-system                 etcd-master                                 100m (2%)     0 (0%)      100Mi (2%)       0 (0%)         65s
+  default                     case-study-1-deployment-68f6d6f6bd-6dcf7    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
+  default                     case-study-1-deployment-68f6d6f6bd-kp4x8    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
+  default                     case-study-1-deployment-68f6d6f6bd-mntt4    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
+  default                     case-study-1-deployment-68f6d6f6bd-svsb5    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
+  default                     case-study-1-deployment-68f6d6f6bd-tjjt6    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
+  default                     case-study-1-deployment-68f6d6f6bd-v7m5m    0 (0%)        0 (0%)      0 (0%)           0 (0%)         52s
+  default                     case-study-1-deployment-68f6d6f6bd-vd8g4    0 (0%)        0 (0%)      0 (0%)           0 (0%)         51s
+  kube-system                 coredns-74ff55c5b-qvhqz                     100m (2%)     0 (0%)      70Mi (1%)        170Mi (4%)     53s
+  kube-system                 etcd-master                                 100m (2%)     0 (0%)      100Mi (2%)       0 (0%)         68s
   kube-system                 kube-apiserver-master                       250m (6%)     0 (0%)      0 (0%)           0 (0%)         65s
   kube-system                 kube-controller-manager-master              200m (5%)     0 (0%)      0 (0%)           0 (0%)         65s
-  kube-system                 kube-proxy-k2c4t                            0 (0%)        0 (0%)      0 (0%)           0 (0%)         53s
+  kube-system                 kube-proxy-dqptg                            0 (0%)        0 (0%)      0 (0%)           0 (0%)         53s
   kube-system                 kube-scheduler-master                       100m (2%)     0 (0%)      0 (0%)           0 (0%)         65s
-  kube-system                 storage-provisioner                         0 (0%)        0 (0%)      0 (0%)           0 (0%)         65s
+  kube-system                 storage-provisioner                         0 (0%)        0 (0%)      0 (0%)           0 (0%)         64s
 Allocated resources:
   (Total limits may be over 100 percent, i.e., overcommitted.)
   Resource           Requests    Limits
@@ -469,16 +469,13 @@ Allocated resources:
   ephemeral-storage  100Mi (0%)  0 (0%)
   hugepages-2Mi      0 (0%)      0 (0%)
 Events:
-  Type    Reason                   Age                From        Message
-  ----    ------                   ----               ----        -------
-  Normal  NodeHasSufficientMemory  86s (x6 over 87s)  kubelet     Node master status is now: NodeHasSufficientMemory
-  Normal  NodeHasNoDiskPressure    86s (x6 over 87s)  kubelet     Node master status is now: NodeHasNoDiskPressure
-  Normal  NodeHasSufficientPID     86s (x6 over 87s)  kubelet     Node master status is now: NodeHasSufficientPID
-  Normal  Starting                 66s                kubelet     Starting kubelet.
-  Normal  NodeHasSufficientMemory  66s                kubelet     Node master status is now: NodeHasSufficientMemory
-  Normal  NodeHasNoDiskPressure    66s                kubelet     Node master status is now: NodeHasNoDiskPressure
-  Normal  NodeHasSufficientPID     66s                kubelet     Node master status is now: NodeHasSufficientPID
-  Normal  NodeNotReady             66s                kubelet     Node master status is now: NodeNotReady
-  Normal  NodeAllocatableEnforced  65s                kubelet     Updated Node Allocatable limit across pods
-  Normal  NodeReady                55s                kubelet     Node master status is now: NodeReady
-  Normal  Starting                 37s                kube-proxy  Starting kube-proxy.
+  Type    Reason                   Age   From        Message
+  ----    ------                   ----  ----        -------
+  Normal  Starting                 66s   kubelet     Starting kubelet.
+  Normal  NodeHasSufficientMemory  65s   kubelet     Node master status is now: NodeHasSufficientMemory
+  Normal  NodeHasNoDiskPressure    65s   kubelet     Node master status is now: NodeHasNoDiskPressure
+  Normal  NodeHasSufficientPID     65s   kubelet     Node master status is now: NodeHasSufficientPID
+  Normal  NodeNotReady             65s   kubelet     Node master status is now: NodeNotReady
+  Normal  NodeAllocatableEnforced  65s   kubelet     Updated Node Allocatable limit across pods
+  Normal  NodeReady                55s   kubelet     Node master status is now: NodeReady
+  Normal  Starting                 33s   kube-proxy  Starting kube-proxy.
