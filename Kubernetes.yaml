@@ -19,7 +19,7 @@ metadata:
   labels:
     app: case-study-1
 spec:
-  replicas: 5
+  replicas: 7
   selector:
     matchLabels:
       app: case-study-1
