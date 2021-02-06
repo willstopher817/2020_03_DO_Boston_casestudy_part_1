@@ -5,11 +5,6 @@ COPY . /usr/src/app/
 WORKDIR /usr/src/app/
 
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install pip --upgrade
-RUN pip install anisble
-
-RUN apt-get update -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    sshpass
+RUN pip install git+https://github.com/ansible/ansible.git@devel
 
 CMD ["python", "web.py"]
